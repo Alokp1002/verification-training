@@ -11,6 +11,13 @@ class adress;
     this.country=country;
   endfunction
   
+ /* function new();//default
+    this.village=village;
+    this.state=state;
+    this.pincode=pincode;
+    this.country=country;
+  endfunction*/
+  
   function void setvillage(string village);
     this.village=village;
   endfunction
@@ -19,7 +26,7 @@ class adress;
     this.state=state;
   endfunction
   
-	function void setpincode(int pincode);
+  function void setpincode(int pincode);
     this.pincode=pincode;
   endfunction
   
@@ -66,8 +73,15 @@ class student;
     this.addr=addr;
   endfunction
   
-  function void setname(string name);   
-    this.name = name;    
+ /* function new();//default
+    this.name=name;
+    this.rollno=rollno;
+    this.s=s;
+    this.addr=addr;
+  endfunction*/
+  
+  function void setname(string name); 
+    this.name =name;    
   endfunction
   
   function void setrollno(int rollno);   
@@ -110,9 +124,13 @@ module top_tb();
   stream s = ECE;
   adress a1 = new("antari", "UP", 212301, "India");
   student s1 = new("Alok",56,s,a1);
+ 
+  //adress a2=new();
+  //student s2=new();//default constructor;
   
   initial begin
 	s1.print();
+    //s2.print();
     s1.setname("shyamu");
     s1.setrollno(99);
     s1.setstream(CSE);
