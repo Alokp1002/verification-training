@@ -1,10 +1,10 @@
 class adress;
   string village;
   string state;
-  longint pincode;
+  int pincode;
   string country;
   
-  function new(string village,string state,longint pincode, string country);
+  function new(string village,string state,int pincode, string country);
     this.village=village;
     this.state=state;
     this.pincode=pincode;
@@ -19,7 +19,7 @@ class adress;
     this.state=state;
   endfunction
   
-  function void setpincode(string pincode);
+	function void setpincode(int pincode);
     this.pincode=pincode;
   endfunction
   
@@ -35,7 +35,7 @@ class adress;
     return this.state;
   endfunction
   
-  function longint getpincode();
+  function int getpincode();
     return this.pincode;
   endfunction
   
